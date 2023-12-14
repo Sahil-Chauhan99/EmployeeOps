@@ -10,7 +10,7 @@ import com.employee.model.Employee;
 public interface EmployeeRepository {
 	public Employee getEmployeeById(Integer id);
 	public Employee create(Employee employee);
-	public Employee updateEmployee(Employee employee);
+	public void update(Employee employee);
 	public void deleteEmployee(Integer id);
 	public List<Employee> getAllEmployee();
 	}

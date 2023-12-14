@@ -25,15 +25,33 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 	
 
 	@Override
-	public Employee updateEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		return null;
+	public void update(Employee employee) {
+	List<Employee> employees = getEmployeeList();
+	for(Employee emp : employees) {
+		if(emp.getId() == employee.getId()) {
+			if(employee.getName() != null) {
+				emp.setName(employee.getName());	
+			}
+			if(employee.getEmail() != null) {
+				emp.setEmail(employee.getEmail());
+			}
+			if(0L != employee.getPhone()) {
+				emp.setPhone(employee.getPhone());
+			}	
+		}
+	}
 	}
 
 	@Override
 	public void deleteEmployee(Integer id) {
-		// TODO Auto-generated method stub
-		
+	List<Employee> employees = getEmployeeList();
+	Employee emp = null;
+	for(Employee e: employees) {
+		if(e.getId() == id) {
+			emp = e;
+		}
+	}
+	employees.remove(employees.indexOf(emp));
 	}
 	
 	@Override
