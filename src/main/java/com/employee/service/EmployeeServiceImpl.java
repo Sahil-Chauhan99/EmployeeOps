@@ -23,7 +23,12 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Override
 	public List<Employee> getAllEmployee() {
 		
-		return (List<Employee>) employeeRepository.getAllEmployee();
+		return employeeRepository.getAllEmployee();
+	}
+
+	@Override
+	public Employee create(Employee employee) {
+		return employeeRepository.create(employee);
 	}
 
 }

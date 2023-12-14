@@ -1,5 +1,7 @@
 package com.employee.repository;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.employee.model.Employee;
@@ -7,8 +9,8 @@ import com.employee.model.Employee;
 @Repository
 public interface EmployeeRepository {
 	public Employee getEmployeeById(Integer id);
-	public Integer saveEmployee(Employee employee);
+	public Employee create(Employee employee);
 	public Employee updateEmployee(Employee employee);
 	public void deleteEmployee(Integer id);
-	public Employee getAllEmployee();
+	public List<Employee> getAllEmployee();
 	}
