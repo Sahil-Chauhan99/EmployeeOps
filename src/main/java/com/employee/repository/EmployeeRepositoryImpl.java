@@ -37,6 +37,12 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public Employee getAllEmployee() {
+		
+		return (Employee) getEmployeeList();
+	}
 
 	public List<Employee> getEmployeeList() {
 		List<Employee> list = new ArrayList<>();
@@ -45,8 +51,6 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 		list.add(new Employee(3, "Test3", "test3@mail.com", 333333333));
 		list.add(new Employee(4, "Test4", "test4@mail.com", 444444444));
 		return list;
-	}
-	
-	
+	}	
 	
 }

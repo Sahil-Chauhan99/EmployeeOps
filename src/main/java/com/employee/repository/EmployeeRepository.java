@@ -10,4 +10,5 @@ public interface EmployeeRepository {
 	public Integer saveEmployee(Employee employee);
 	public Employee updateEmployee(Employee employee);
 	public void deleteEmployee(Integer id);
-}
+	public Employee getAllEmployee();
+	}
